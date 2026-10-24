@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu Bicicleta - Rueda Libre</title>
+</head>
+<body>
+
+    <header>
+        <h1>Rueda Libre</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulario de reserva</h2>
+
+            <form action="procesar_reserva.php" method="post">
+
+                <fieldset>
+                    <legend>Tus datos</legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" minlength="3" required placeholder="Mínimo 3 caracteres">
+                    </p>
+
+                    <p>
+                        <label for="documento">Documento de identidad:</label>
+                        <input type="text" id="documento" name="documento"title="Debe contener solo números, entre 6 y 10 dígitos" required placeholder="Entre 6 y 10 dígitos">
+                    </p>
+
+                    <p>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+                    </p>
+
+                    <p>
+                        <label for="telefono">Celular:</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="3[0-9]{9}" maxlength="10" title="Debe tener 10 dígitos y empezar por 3" required placeholder="Ej. 3171511606">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu alquiler</legend>
+
+                    <p>
+                        <label for="fecha_inicio">Fecha del alquiler:</label>
+                        <input type="date" id="fecha_inicio" name="fecha_inicio" min="2026-11-01" max="2026-12-31" required>
+                    </p>
+
+                    <p>
+                        <label for="cantidad">Cantidad de bicicletas:</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="6" value="1" required>
+                    </p>
+
+                    <p>
+                        <label for="punto_recogida">Punto de recogida:</label>
+                        <select id="punto_recogida" name="punto_recogida" required>
+                            <option value="">-- Selecciona una sede --</option>
+                            <option value="centro">Parque La Estrella</option>
+                            <option value="norte">Centro Comercial Monterrey</option>
+                            <option value="costanera">Centro Comercial Outlet Moda</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="plan">Plan de alquiler:</label>
+                        <select id="plan" name="plan" required>
+                            <option value="">-- Selecciona un plan --</option>
+                            <option value="horas">Por Horas (Flexible)</option>
+                            <option value="fin_de_semana">Escapada de Fin de Semana</option>
+                            <option value="semanal">Plan Semanal</option>
+                        </select>
+                    </p>
+
+                    <fieldset>
+                        <legend>Tipo de bicicleta:</legend>
+                        <p>
+                            <input type="radio" id="bici_urbana" name="tipo_bicicleta" value="urbana" checked required>
+                            <label for="bici_urbana">Urbana</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="bici_montana" name="tipo_bicicleta" value="montana">
+                            <label for="bici_montana">Montaña</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="bici_electrica" name="tipo_bicicleta" value="electrica">
+                            <label for="bici_electrica">Eléctrica</label>
+                        </p>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Confirmación</legend>
+
+                    <p>
+                        <label for="comentarios">Comentarios o solicitudes especiales:</label><br>
+                        <textarea id="comentarios" name="comentarios" rows="2" cols="50" maxlength="300" placeholder="Máximo 300 caracteres..."></textarea>
+                    </p>
+                </fieldset>
+
+                <br>
+                <button type="submit">Confirmar Reserva</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

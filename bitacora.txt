@@ -20,3 +20,7 @@ Esquema de regiones:
  Navegacion |     <a>
  Contenido  |     <p>
 
+ Aprendí a usar etiquetas como <fieldset> y <legend>
+ Aprendí a usar la etiqueta select y option
+ Aprendí a manejar el atirbuto required junto con la etiqueta input
+
