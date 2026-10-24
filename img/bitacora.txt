@@ -1,0 +1,26 @@
+código de estado HTTP 404.
+
+HTML: Estructura Ex: <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+</head>
+<body></body>
+
+CSS: Diseño
+
+
+JavaScript: Acciones
+
+
+Esquema de regiones:
+
+ Encabezado |     <h1>
+ Navegacion |     <a>
+ Contenido  |     <p>
+
+ Aprendí a usar etiquetas como <fieldset> y <legend>
+ Aprendí a usar la etiqueta select y option
+ Aprendí a manejar el atirbuto required junto con la etiqueta input
+
