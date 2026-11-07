@@ -1,26 +1,20 @@
-código de estado HTTP 404.
+=== BITÁCORA DE PETICIONES: RUEDA LIBRE ===
 
-HTML: Estructura Ex: <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
-</head>
-<body></body>
+1. ANÁLISIS DE LA PETICIÓN INICIAL (index.html)
+- URL Completa: http://127.0.0
+- Protocolo: HTTP (usualmente HTTP/1.1 o HTTP/2 en Live Server)
+- Host: 127.0.0.1 (o localhost)
+- Puerto: 5500
+- Ruta: /index.html
+- Método de la petición: GET
+- Código de estado: 200 OK (Significa que la solicitud fue exitosa y el servidor entregó el archivo).
 
-CSS: Diseño
+2. PRUEBA DE RUTA INEXISTENTE
+- Al escribir: http://127.0.0
+- Código de estado: 404 Not Found
+- Significado: El servidor funciona correctamente pero el recurso o página solicitada no existe en el sistema de archivos.
 
-
-JavaScript: Acciones
-
-
-Esquema de regiones:
-
- Encabezado |     <h1>
- Navegacion |     <a>
- Contenido  |     <p>
-
- Aprendí a usar etiquetas como <fieldset> y <legend>
- Aprendí a usar la etiqueta select y option
- Aprendí a manejar el atirbuto required junto con la etiqueta input
-
+3. ROLES DE LAS TECNOLOGÍAS WEB en Rueda Libre
+- HTML (Estructura): Define el esqueleto del sitio. Ejemplo: El título <h1>Rueda Libre</h1> y los párrafos de las tarifas de alquiler.
+- CSS (Presentación): Define el diseño visual. Ejemplo: Pintar el fondo de la página de color verde o centrar el catálogo de bicicletas.
+- JavaScript (Interactividad): Define el comportamiento dinámico. Ejemplo: Un botón interactivo que calcula el costo total dependiendo de las horas de alquiler seleccionadas por el cliente.
