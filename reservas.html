@@ -1,121 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/styles.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserva tu experiencia con Rueda Libre.">
+  <title>Reservas | Rueda Libre</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <div class="capsule">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <header>
-                            <h1>Rueda Libre</h1>
-                            <nav>
-                                <ul>
-                                    <li><a href="index.html">Inicio</a></li>
-                                    <li><a href="reservas.html">Reservas</a></li>
-                                </ul>
-                            </nav>
-                        </header>
+<body class="bg-white text-gray-800">
+  <a href="#contenido"
+     class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-yellow-300 p-2 rounded">
+    Saltar al contenido
+  </a>
 
-                        <main>
-                            <section>
-                                <h2>Formulario de reserva</h2>
+  <header class="bg-gray-900 text-white p-4">
+    <h1 class="text-2xl font-bold">Rueda Libre</h1>
+    <nav aria-label="Navegación principal">
+      <ul class="flex gap-4 mt-2">
+        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="index.html">Inicio</a></li>
+        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="rutas.html">Rutas</a></li>
+        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="reservas.html" aria-current="page">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                                <form action="procesar_reserva.php" method="post">
+  <main id="contenido">
+    <form action="#" method="post"
+          class="bg-gray-100 p-4 rounded shadow-md max-w-md mx-auto mt-8">
+      <h2 class="text-xl font-semibold mb-4">Formulario de reserva</h2>
 
-                                    <fieldset>
-                                        <legend>Tus datos</legend>
+      <div class="mb-4">
+        <label for="nombre" class="block text-gray-700">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"
+               required minlength="3" autocomplete="name"
+               class="w-full border border-gray-300 p-2 rounded focus:outline-2 focus:outline-blue-500">
+      </div>
 
-                                        <p>
-                                            <label for="nombre">Nombre completo:</label>
-                                            <input type="text" id="nombre" name="nombre" required>
-                                        </p>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700">Email:</label>
+        <input type="email" id="email" name="email"
+               required autocomplete="email"
+               class="w-full border border-gray-300 p-2 rounded focus:outline-2 focus:outline-blue-500">
+      </div>
 
-                                        <p>
-                                            <label for="email">Correo electrónico:</label>
-                                            <input type="email" id="email" name="email" required>
-                                        </p>
+      <div class="mb-4">
+        <label for="fecha" class="block text-gray-700">Fecha de la reserva:</label>
+        <input type="date" id="fecha" name="fecha" required
+               class="w-full border border-gray-300 p-2 rounded focus:outline-2 focus:outline-blue-500">
+      </div>
 
-                                        <p>
-                                            <label for="telefono">Teléfono de contacto:</label>
-                                            <input type="tel" id="telefono" name="telefono" required>
-                                        </p>
-                                    </fieldset>
+      <div class="mb-4">
+        <label for="mensaje" class="block text-gray-700">Detalles:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" maxlength="300"
+                  aria-describedby="ayuda-mensaje"
+                  class="w-full border border-gray-300 p-2 rounded focus:outline-2 focus:outline-blue-500"
+                  placeholder="Especificaciones para su comodidad"></textarea>
+        <p id="ayuda-mensaje" class="text-sm text-gray-600">Máximo 300 caracteres.</p>
+      </div>
 
-                                    <fieldset>
-                                        <legend>Tu alquiler</legend>
+      <button type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500">
+        Enviar
+      </button>
+    </form>
+  </main>
 
-                                        <p>
-                                            <label for="fecha_inicio">Fecha de inicio:</label>
-                                            <input type="date" id="fecha_inicio" name="fecha_inicio" required>
-                                        </p>
-                                        <p>
-                                            <label for="punto_recogida">Punto de recogida:</label>
-                                            <select id="punto_recogida" name="punto_recogida" required>
-                                                <option value="">-- Selecciona una sede --</option>
-                                                <option value="centro">Parque La Estrella</option>
-                                                <option value="norte">Centro Comercial Monterrey</option>
-                                                <option value="costanera">Centro Comercial Outlet Moda</option>
-                                            </select>
-                                        </p>
-
-                                        <fieldset>
-                                            <legend>Tipo de bicicleta:</legend>
-                                            <p>
-                                                <input type="radio" id="bici_urbana" name="tipo_bicicleta"
-                                                    value="urbana" checked>
-                                                <label for="bici_urbana">Urbana</label>
-                                            </p>
-                                            <p>
-                                                <input type="radio" id="bici_montana" name="tipo_bicicleta"
-                                                    value="montana">
-                                                <label for="bici_montana">Montaña (MTB)</label>
-                                            </p>
-                                            <p>
-                                                <input type="radio" id="bici_electrica" name="tipo_bicicleta"
-                                                    value="electrica">
-                                                <label for="bici_electrica">Eléctrica</label>
-                                            </p>
-                                        </fieldset>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <legend>Confirmación</legend>
-
-                                        <p>
-                                            <label for="comentarios">Comentarios o solicitudes especiales:</label><br>
-                                            <textarea id="comentarios" name="comentarios" rows="4" cols="40"
-                                                placeholder="Ej. Talla de casco deseada, silla de bebé, etc."></textarea>
-                                        </p>
-
-
-                                    </fieldset>
-
-                                    <br>
-                                    <button type="submit">Confirmar Reserva</button>
-
-                                </form>
-                            </section>
-                        </main>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+  <footer class="text-center p-4 mt-8 text-gray-600">
+    <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
+  </footer>
 </body>
-
 </html>

@@ -12,19 +12,33 @@
 </head>
 
 <body>
-    <header class="bg-gray-800 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <ul class="flex space-x-4">
-                <li >Inicio</li>
-                <li>Conactanos</li>
-                <li>Quienes somos</li>
-            </ul>
-        </div>
+  <header class="bg-gray-900 text-white p-4">
+    <p class="text-2xl font-bold">Rueda Libre</p>
+    <nav aria-label="Navegación principal">
+      <ul class="flex gap-4 mt-2">
+        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="index.html" aria-current="page">Inicio</a></li>
+        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="rutas.html">Rutas</a></li>
+        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" class="max-w-3xl mx-auto p-4">
+    <section aria-labelledby="titulo-bienvenida" class="mt-8">
+      <h1 id="titulo-bienvenida" class="text-3xl font-bold mb-4">Bienvenido a Rueda Libre</h1>
+      <p class="mb-4">
+        Descubre rutas en bicicleta para todos los niveles y reserva tu lugar en pocos pasos.
+      </p>
+      <a href="reservas.html"
+         class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500">
+        Reservar ahora
+      </a>
+    
     </header>
     <main class="container mx-auto p-4 flex justify-center items-center font-serif">
-        <h1>Rueda Libre</h1>
     </main>
-<table class="border-collapse border border-gray-400   ">
+    <img src="img/indeximage.webp" alt="Index Image" class="w-full h-auto">
+<table class="border-collapse border border-gray-400 w-full">
   <thead>
     <tr>
       <th class="border border-gray-300  ">Tipo de Bici</th>
@@ -52,9 +66,6 @@
       <td class="border border-gray-300  ">Ruta Santa Elena</td>
       <td class="border border-gray-300  ">20.000</td>
     </tr>
-    
-  </tbody>
-</table>
 </body>
 
 </html>
