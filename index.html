@@ -1,73 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/styles.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rueda Libre - Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="bg-gray-900 text-white p-4">
-    <p class="text-2xl font-bold">Rueda Libre</p>
-    <nav aria-label="Navegación principal">
-      <ul class="flex gap-4 mt-2">
-        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="index.html" aria-current="page">Inicio</a></li>
-        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="rutas.html">Rutas</a></li>
-        <li><a class="underline focus:outline-2 focus:outline-yellow-300" href="reservas.html">Reservas</a></li>
-      </ul>
-    </nav>
+  <!-- Encabezado y Navegación -->
+  <header class="bg-dark text-white p-3">
+    <div class="container">
+      <p class="h2 fw-bold mb-2">Rueda Libre</p>
+      <nav aria-label="Navegación principal">
+        <ul class="nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link text-white text-decoration-underline p-0" href="index.html" aria-current="page">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-decoration-underline p-0" href="rutas.html">Rutas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-decoration-underline p-0" href="reservas.html">Reservas</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main id="contenido" class="max-w-3xl mx-auto p-4">
-    <section aria-labelledby="titulo-bienvenida" class="mt-8">
-      <h1 id="titulo-bienvenida" class="text-3xl font-bold mb-4">Bienvenido a Rueda Libre</h1>
-      <p class="mb-4">
+  <!-- Contenido Principal -->
+  <main id="contenido" class="container my-4" style="max-width: 768px;">
+    
+    <!-- Sección de Bienvenida -->
+    <section aria-labelledby="titulo-bienvenida" class="mt-4 mb-5">
+      <h1 id="titulo-bienvenida" class="display-6 fw-bold mb-3">Bienvenido a Rueda Libre</h1>
+      <p class="lead mb-4">
         Descubre rutas en bicicleta para todos los niveles y reserva tu lugar en pocos pasos.
       </p>
-      <a href="reservas.html"
-         class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-500">
+      <a href="reservas.html" class="btn btn-primary px-4 py-2">
         Reservar ahora
       </a>
-    
-    </header>
-    <main class="container mx-auto p-4 flex justify-center items-center font-serif">
-    </main>
-    <img src="img/indeximage.webp" alt="Index Image" class="w-full h-auto">
+    </section>
 
-    
-<table class="border-collapse border border-gray-400 w-full">
-  <thead>
-    <tr>
-      <th class="border border-gray-300  ">Tipo de Bici</th>
-      <th class="border border-gray-300  ">Precio</th>
-    <th class="border border-gray-300  ">Ruta</th>
-    <th class="border border-gray-300  ">Precio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300  ">Alto de palmas</td>
-      <td class="border border-gray-300  ">5.000</td>      <td class="border border-gray-300  ">Alto de palmas</td>
-      <td class="border border-gray-300  ">10.000</td>
+    <!-- Imagen Principal -->
+    <div class="mb-5 text-center">
+      <img src="img/indeximage.webp" alt="Ciclistas disfrutando de una ruta en Rueda Libre" class="img-fluid rounded shadow-sm w-100">
+    </div>
 
-    </tr>
-    <tr>
-      <td class="border border-gray-300  ">Deportiva</td>
-      <td class="border border-gray-300  ">10.000</td>
-      <td class="border border-gray-300  ">Alto de minas</td>
-      <td class="border border-gray-300  ">15.000</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300  ">Electrica</td>
-      <td class="border border-gray-300  ">15.000</td>
-      <td class="border border-gray-300  ">Ruta Santa Elena</td>
-      <td class="border border-gray-300  ">20.000</td>
-    </tr>
+    <!-- Tabla de Tarifas -->
+    <section aria-labelledby="titulo-tarifas">
+      <h2 id="titulo-tarifas" class="h4 fw-bold mb-3">Tarifas de Alquiler y Rutas</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Tipo de Bici</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Ruta</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Urbana / Clásica</td>
+              <td>$5.000</td>
+              <td>Alto de Palmas</td>
+              <td>$10.000</td>
+            </tr>
+            <tr>
+              <td>Deportiva</td>
+              <td>$10.000</td>
+              <td>Alto de Minas</td>
+              <td>$15.000</td>
+            </tr>
+            <tr>
+              <td>Eléctrica</td>
+              <td>$15.000</td>
+              <td>Ruta Santa Elena</td>
+              <td>$20.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
