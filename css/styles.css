@@ -1,0 +1,9 @@
+.nav-link  {
+    border: 0.1rem solid rgba(250, 250, 250, 0.336);
+    border-radius: 2rem;
+}
+
+.nav-link:hover  {
+    border: 0.1rem solid rgba(250, 250, 250, 0.151);
+    border-radius: 2rem;
+}
