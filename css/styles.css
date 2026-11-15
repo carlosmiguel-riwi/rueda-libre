@@ -27,3 +27,35 @@
     height: 250px;
   }
 }
+
+.model-card {
+  width: 100%;
+  max-width: 320px;
+  height: 430px;
+  margin-inline: auto;
+}
+
+.model-card .card-img-top {
+  height: 180px;
+  padding: 0.75rem;
+  object-fit: contain;
+}
+
+.model-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.model-card .card-text {
+  flex-grow: 1;
+}
+
+.model-card-button {
+  margin-top: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.model-card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.35rem 0.75rem rgba(13, 110, 253, 0.3);
+}
