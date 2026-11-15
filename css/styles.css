@@ -8,6 +8,22 @@
     border-radius: 2rem;
 }
 /*Modificaicon carrucel*/
-.carousel-item {
-  transition: transform 1.2s ease-in-out;
+
+#carouselExampleAutoplaying.carousel-fade .carousel-item {
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Mismo tamaño para todas las imágenes sin deformarlas */
+#carouselExampleAutoplaying .carousel-item img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ajuste de altura para pantallas de celular */
+@media (max-width: 768px) {
+  #carouselExampleAutoplaying .carousel-item img {
+    height: 250px;
+  }
 }
