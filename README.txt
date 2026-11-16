@@ -34,17 +34,22 @@
 - La manera más común de organizacion de carpetas al trabajar es el siguiente
 mi-proyecto-web/
 │
-├── index.html              <-- Página principal (y otros .html si los hay)
+├── index.html              <-- Siempre en la raíz
 │
-├── css/                    <-- Hojas de estilo
-│   └── styles.css          (o main.css / style.css)
+├── pages/                  <-- Páginas secundarias (también llamada 'views/')
+│   ├── nosotros.html
+│   ├── servicios.html
+│   └── contacto.html
 │
-├── js/                     <-- Scripts de JavaScript
-│   └── main.js             (o script.js / index.js)
+├── css/
+│   ├── global.css          <-- Estilos compartidos (menú, pie de página, fuentes)
+│   └── contacto.css        <-- Estilos exclusivos de una página (opcional)
 │
-└── assets/                 <-- Recursos multimedia y archivos estáticos
-    ├── images/             <-- Imágenes (.png, .jpg, .svg, .webp)
-    ├── icons/              <-- Iconos o logos
-    └── fonts/              <-- Tipografías personalizadas (opcional)
+├── js/
+│   ├── main.js             <-- Lógica global
+│   └── formulario.js       <-- Lógica específica (opcional)
+│
+└── assets/
+    └── images/
     Se intentará priosirzar en próximos proyectos
     9. 
