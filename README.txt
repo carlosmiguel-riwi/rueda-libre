@@ -74,3 +74,113 @@ closeMenu(restoreFocus): Oculta el menú móvil, actualiza sus estados de accesi
 openMenu(): Muestra el menú móvil, activa su accesibilidad, añade las clases de apertura correspondientes en el DOM y traslada el foco automáticamente hacia el botón de cierre dentro del menú.
 
 trapFocus(event): Controla la navegación por teclado dentro del menú abierto. Si el usuario presiona la tecla Escape, cierra el menú; si presiona Tab, atrapa el foco del usuario dentro de los elementos interactivos del menú para que no se escape hacia el fondo de la página.
+
+10. IMPLEMENTACION DE TAILWIND
+Se genero un cheatsheet con las siguientes especificaciones las cuales se implementearon en reparaciones.html 
+
+
+A. ESPACIADO (Padding, Margin y Gap)
+
+   - Prefijos: p-, m-, gap- (direcciones: t, b, l, r, x, y)
+
+   - Ejemplos: p-4, m-6, px-2, mt-4, gap-2
+
+   - Función: Controlan el relleno interior, los márgenes externos y la 
+
+     separación entre elementos dentro de contenedores flex o grid.
+
+
+
+B. TIPOGRAFÍA
+
+   - Prefijos: text-, font-, leading-, tracking-
+
+   - Ejemplos: text-xl, font-bold, text-center, leading-relaxed
+
+   - Función: Modifican el tamaño del texto, el peso/grosor de la fuente, 
+
+     la alineación y el interlineado.
+
+
+
+C. COLORES
+
+   - Prefijos: bg-, text-, border-
+
+   - Ejemplos: bg-blue-500, text-white, border-red-400
+
+   - Función: Asignan colores de fondo (bg), color al texto (text) y color 
+
+     a los bordes (border) mediante escalas numéricas de intensidad.
+
+
+
+D. DIMENSIONES (Ancho y Alto)
+
+   - Prefijos: w-, h-, max-w-, min-h-
+
+   - Ejemplos: w-full, h-64, max-w-md, min-h-screen
+
+   - Función: Establecen el ancho (width), el alto (height) y los límites 
+
+     máximos o mínimos de tamaño de un elemento.
+
+
+
+E. FLEXBOX Y GRID (Maquetación y Alineación)
+
+   - Clases/Prefijos: flex, grid, grid-cols-, items-, justify-
+
+   - Ejemplos: flex, grid, grid-cols-3, items-center, justify-between
+
+   - Función: Crean sistemas de diseño flexibles o en cuadrícula, permitiendo 
+
+     alinear elementos en el eje vertical (items) y horizontal (justify).
+
+
+
+F. BORDES Y EFECTOS VISUALES
+
+   - Prefijos: rounded-, border-, shadow-, opacity-
+
+   - Ejemplos: rounded-lg, border-2, shadow-md, opacity-75
+
+   - Función: Redondean las esquinas, definen el grosor de los bordes, 
+
+     aplican sombras y controlan la transparencia.
+
+
+
+G. VISUALIZACIÓN Y POSICIONAMIENTO
+
+   - Clases: hidden, block, inline-block, relative, absolute, fixed, sticky
+
+   - Ejemplos: hidden, md:block, relative, absolute top-0
+
+   - Función: Controlan si un elemento se muestra u oculta en pantalla y 
+
+     determinan su comportamiento de posicionamiento en el flujo del documento.
+
+
+
+H. PREFIJOS DE ESTADO Y DISEÑO ADAPTATIVO (Responsive)
+
+   - Estados: hover:, focus:, active:, disabled:, dark:
+
+   - Pantallas: sm:, md:, lg:, xl:, 2xl:
+
+   - Ejemplos: hover:bg-blue-600, md:flex, dark:bg-slate-900
+
+   - Función: Aplican estilos condicionales al interactuar con el elemento 
+
+     o según el tamaño de la pantalla del dispositivo.
+
+11. SE CORRIGE LA IDEA DE UNA UNICA INTERFAS CON TAILWIND
+Para evitar choques visuales y en pequeños funcionamientos se aplica Bootrap en todas las interfaces y Tailwind como una medida estetica
+
+12. MODALES Y ALERTS
+NModal: Se utiliza para mostrar contenido que requiere la atención completa del usuario o una acción específica sin cambiar de página (por ejemplo: un formulario de inicio de sesión, los detalles de un producto, una confirmación importante o un reproductor de video).
+
+Alert: Comunica notificaciones rápidas y contextuales sin interrumpir drásticamente la navegación (por ejemplo: "¡Datos guardados con éxito!", "Error al conectar con el servidor" o "Tienes un nuevo mensaje").
+
+13. 
