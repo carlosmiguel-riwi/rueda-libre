@@ -4,6 +4,33 @@
   transition: opacity 1.5s ease-in-out;
 }
 
+#carouselExampleAutoplaying .carousel-link {
+  display: block;
+  position: relative;
+  color: #fff;
+}
+
+#carouselExampleAutoplaying .carousel-link::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 45%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.15) 55%, transparent);
+  content: "";
+  pointer-events: none;
+}
+
+#carouselExampleAutoplaying .carousel-title {
+  position: absolute;
+  inset: 0 auto auto 0;
+  padding: 1.5rem;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-align: left;
+  z-index: 1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 /* Mismo tamaño para todas las imágenes sin deformarlas */
 #carouselExampleAutoplaying .carousel-item img {
   height: 400px;
