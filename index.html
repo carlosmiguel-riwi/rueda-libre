@@ -20,28 +20,25 @@
   <header class="navbar navbar-expand-md navbar-dark bg-dark p-3 sticky-top">
     <div class="container">
       <a href="index.html" class="navbar-brand h2 fw-bold mb-0">Rueda Libre</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navInicio"
-        aria-controls="navInicio" aria-expanded="false" aria-label="Alternar menú de navegación">
+      <button class="navbar-toggler mobile-menu-toggle d-md-none" type="button" data-mobile-menu-toggle
+        aria-controls="site-mobile-menu" aria-expanded="false" aria-label="Alternar menú de navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas-md offcanvas-end bg-dark text-white mobile-nav-offcanvas" tabindex="-1" id="navInicio" aria-labelledby="navInicioLabel">
-        <div class="offcanvas-header d-md-none">
-          <h2 class="offcanvas-title fs-5" id="navInicioLabel">Menú</h2>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+      <nav id="site-mobile-menu" class="mobile-menu ms-md-auto" aria-label="Navegación principal" aria-hidden="true" inert>
+        <div class="mobile-menu-header">
+          <h2 class="h5 mb-0">Menú</h2>
+          <button type="button" class="btn-close btn-close-white mobile-menu-close" data-mobile-menu-close aria-label="Cerrar menú"></button>
         </div>
-        <div class="offcanvas-body p-md-0">
-          <nav class="ms-md-auto" aria-label="Navegación principal">
-            <ul class="navbar-nav gap-md-2">
-              <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link" href="pages/tarifas.html">Tarifas</a></li>
-              <li class="nav-item"><a class="nav-link" href="pages/reservas.html">Reservas</a></li>
-              <li class="nav-item"><a class="nav-link" href="pages/reparaciones.html">Reparaciones</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+        <ul class="navbar-nav mobile-menu-links gap-md-2">
+          <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/tarifas.html">Tarifas</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/reservas.html">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/reparaciones.html">Reparaciones</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
+  <div id="site-mobile-menu-backdrop" class="mobile-menu-backdrop" aria-hidden="true"></div>
 
   <!-- Contenido Principal -->
   <main id="contenido" class="container my-4" style="max-width: 768px;">
@@ -106,8 +103,8 @@
           <div class="card-body">
             <h2 class="card-title">Montañera negra</h2>
             <p class="card-text">Un diseño oscuro con llantas de buen agarre y suspensión delantera para recorrer caminos y senderos.</p>
-            <a src="reservas.html"button" class="btn btn-primary model-card-button" data-bs-toggle="modal"
-              data-bs-target="#modalCicla1">Conoce más</a>
+            <button type="button" class="btn btn-primary model-card-button" data-bs-toggle="modal"
+              data-bs-target="#modalCicla1">Conoce más</button>
           </div>
         </article>
       </div>
@@ -223,7 +220,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -249,7 +246,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -275,7 +272,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -301,7 +298,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -327,7 +324,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -353,7 +350,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -379,7 +376,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -405,7 +402,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -431,7 +428,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top-0"><a href="reservas.html" class="btn btn-primary">Reservar</a></div>
+        <div class="modal-footer border-top-0"><a href="pages/reservas.html" class="btn btn-primary">Reservar</a></div>
       </div>
     </div>
   </div>
@@ -463,6 +460,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="javascript/app.js"></script>
+  <script src="javascript/mobile-menu.js"></script>
 </body>
 
 </html>

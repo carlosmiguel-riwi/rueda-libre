@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conoce las ofertas de mantenimiento y reparación de bicicletas de Rueda Libre.">
   <title>Reparaciones | Rueda Libre</title>
+  <link href="../css/styles.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -17,15 +18,23 @@
     <div class="mx-auto max-w-5xl">
       <div class="flex items-center justify-between">
         <a href="../index.html" class="text-2xl font-bold text-white">Rueda Libre</a>
-        <button id="menu-reparaciones-toggle" type="button" class="rounded border border-gray-500 px-3 py-2 md:hidden"
-          aria-controls="menu-reparaciones-drawer" aria-expanded="false" aria-label="Alternar menú de navegación">
+        <button type="button" class="mobile-menu-toggle rounded border border-gray-500 px-3 py-2 md:hidden"
+          data-mobile-menu-toggle aria-controls="site-mobile-menu" aria-expanded="false" aria-label="Alternar menú de navegación">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
-      <nav class="mt-4 hidden md:mt-0 md:block" aria-label="Navegación principal">
-        <ul class="flex flex-row gap-3">
+      <nav id="site-mobile-menu" class="mobile-menu md:ml-auto" aria-label="Navegación principal" aria-hidden="true" inert>
+        <div class="mobile-menu-header">
+          <h2 class="text-xl font-bold">Menú</h2>
+          <button type="button" class="mobile-menu-close rounded border border-gray-500 px-3 py-2" data-mobile-menu-close aria-label="Cerrar menú">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6L6 18"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="mobile-menu-links">
           <li><a class="rounded px-2 py-1 text-white hover:bg-gray-700" href="../index.html">Inicio</a></li>
           <li><a class="rounded px-2 py-1 text-white hover:bg-gray-700" href="tarifas.html">Tarifas</a></li>
           <li><a class="rounded px-2 py-1 text-white hover:bg-gray-700" href="reservas.html">Reservas</a></li>
@@ -34,26 +43,7 @@
       </nav>
     </div>
   </header>
-
-  <div id="menu-reparaciones-backdrop" class="pointer-events-none fixed inset-0 z-40 bg-black/30 opacity-0 transition-opacity duration-200 ease-in-out motion-reduce:transition-none md:hidden" aria-hidden="true"></div>
-  <aside id="menu-reparaciones-drawer" class="fixed right-4 top-16 z-50 max-h-[85vh] w-max min-w-[15rem] max-w-[85vw] translate-x-full overflow-y-auto rounded-lg bg-gray-900 p-4 text-white shadow-xl transition-transform duration-200 ease-in-out motion-reduce:transition-none md:hidden" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true" inert>
-    <div class="mb-8 flex items-center justify-between">
-      <h2 class="text-xl font-bold">Menú</h2>
-      <button id="menu-reparaciones-close" type="button" class="rounded border border-gray-500 px-3 py-2" aria-label="Cerrar menú">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6L6 18"></path>
-        </svg>
-      </button>
-    </div>
-    <nav aria-label="Menú principal">
-      <ul class="flex flex-col gap-3">
-        <li><a class="block rounded px-3 py-2 text-white hover:bg-gray-700" href="../index.html">Inicio</a></li>
-        <li><a class="block rounded px-3 py-2 text-white hover:bg-gray-700" href="tarifas.html">Tarifas</a></li>
-        <li><a class="block rounded px-3 py-2 text-white hover:bg-gray-700" href="reservas.html">Reservas</a></li>
-        <li><a class="block rounded px-3 py-2 text-white hover:bg-gray-700" href="reparaciones.html" aria-current="page">Reparaciones</a></li>
-      </ul>
-    </nav>
-  </aside>
+  <div id="site-mobile-menu-backdrop" class="mobile-menu-backdrop" aria-hidden="true"></div>
 
   <main id="contenido" class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-10 md:py-12 lg:max-w-6xl">
     <section aria-labelledby="titulo-reparaciones">
@@ -109,6 +99,6 @@
   <footer class="mt-8 border-t border-gray-200 p-6 text-center text-gray-500">
     <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
   </footer>
-  <script src="../javascript/reparaciones.js"></script>
+  <script src="../javascript/mobile-menu.js"></script>
 </body>
 </html>
