@@ -21,25 +21,31 @@
   </a>
 
   <!-- Encabezado y Navegación -->
-  <header class="bg-dark text-white p-3">
+  <header class="navbar navbar-expand-md navbar-dark bg-dark p-3">
     <div class="container">
-      <p class="h2 fw-bold mb-2">Rueda Libre</p>
-      <nav aria-label="Navegación principal">
-        <ul class="nav gap-3">
+      <a href="../index.html" class="navbar-brand h2 fw-bold mb-0">Rueda Libre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navTarifas"
+        aria-controls="navTarifas" aria-expanded="false" aria-label="Alternar menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navTarifas">
+        <nav class="ms-md-auto" aria-label="Navegación principal">
+          <ul class="navbar-nav gap-md-2">
           <li class="nav-item">
-            <a class="nav-link text-white " href="../index.html" aria-current="page">Inicio</a>
+            <a class="nav-link" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="tarifas.html">Tarifas</a>
+            <a class="nav-link" href="tarifas.html" aria-current="page">Tarifas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="reservas.html">Reservas</a>
+            <a class="nav-link" href="reservas.html">Reservas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white " href="reparaciones.html">Reparaciones</a>
+            <a class="nav-link" href="reparaciones.html">Reparaciones</a>
           </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <!-- Contenido Principal -->
