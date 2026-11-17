@@ -1,5 +1,10 @@
 /*Modificaicon carrucel*/
 
+.mobile-nav-offcanvas {
+  --bs-offcanvas-width: min(18rem, 85vw);
+  --bs-offcanvas-transition: transform 0.2s ease-in-out;
+}
+
 #carouselExampleAutoplaying.carousel-fade .carousel-item {
   transition: opacity 1.5s ease-in-out;
 }

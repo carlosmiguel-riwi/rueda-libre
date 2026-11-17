@@ -21,30 +21,28 @@
   </a>
 
   <!-- Encabezado y Navegación -->
-  <header class="navbar navbar-expand-md navbar-dark bg-dark p-3">
+  <header class="navbar navbar-expand-md navbar-dark bg-dark p-3 sticky-top">
     <div class="container">
       <a href="../index.html" class="navbar-brand h2 fw-bold mb-0">Rueda Libre</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navTarifas"
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navTarifas"
         aria-controls="navTarifas" aria-expanded="false" aria-label="Alternar menú de navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navTarifas">
-        <nav class="ms-md-auto" aria-label="Navegación principal">
-          <ul class="navbar-nav gap-md-2">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tarifas.html" aria-current="page">Tarifas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reservas.html">Reservas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reparaciones.html">Reparaciones</a>
-          </li>
-          </ul>
-        </nav>
+      <div class="offcanvas-md offcanvas-end bg-dark text-white mobile-nav-offcanvas" tabindex="-1" id="navTarifas" aria-labelledby="navTarifasLabel">
+        <div class="offcanvas-header d-md-none">
+          <h2 class="offcanvas-title fs-5" id="navTarifasLabel">Menú</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+        </div>
+        <div class="offcanvas-body p-md-0">
+          <nav class="ms-md-auto" aria-label="Navegación principal">
+            <ul class="navbar-nav gap-md-2">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="tarifas.html" aria-current="page">Tarifas</a></li>
+              <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+              <li class="nav-item"><a class="nav-link" href="reparaciones.html">Reparaciones</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
